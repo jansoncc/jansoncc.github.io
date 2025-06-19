@@ -1220,7 +1220,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #630fb4;
+  background: #c26f46;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2506,7 +2506,7 @@ header.header {
   }
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #ff2a68;
+  background-color: #87a96b;
   background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
   border-radius: 3em;
 }

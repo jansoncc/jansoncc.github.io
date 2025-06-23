@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-19T01:46:20.548Z</updated>
+  <updated>2025-06-23T15:15:50.117Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,81 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2025/06/19/hello-world/"/>
-    <id>http://example.com/2025/06/19/hello-world/</id>
-    <published>2025-06-19T01:46:20.548Z</published>
-    <updated>2025-06-19T01:46:20.548Z</updated>
+    <title>前端工程化-2</title>
+    <link href="http://example.com/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-2/"/>
+    <id>http://example.com/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-2/</id>
+    <published>2025-06-12T11:21:04.000Z</published>
+    <updated>2025-06-23T15:15:50.117Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;一、打包构建方案&quot;&gt;&lt;a href=&quot;#一、打包构建方案&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端工程化-1</title>
+    <link href="http://example.com/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-1/"/>
+    <id>http://example.com/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-1/</id>
+    <published>2025-06-12T07:01:00.000Z</published>
+    <updated>2025-06-23T15:56:21.976Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、传统架构概述&quot;&gt;&lt;a href=&quot;#一、传统架构概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>以太坊</title>
+    <link href="http://example.com/2025/06/10/Ganache%E5%AE%89%E8%A3%85%E4%B8%8E%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%B5%8B%E8%AF%95/"/>
+    <id>http://example.com/2025/06/10/Ganache%E5%AE%89%E8%A3%85%E4%B8%8E%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%B5%8B%E8%AF%95/</id>
+    <published>2025-06-10T04:05:00.000Z</published>
+    <updated>2025-06-23T15:58:13.706Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Ganache–以太坊部署-智能合约测试&quot;&gt;&lt;a href=&quot;#Ganache–以太坊部署-智能合约测试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React事件</title>
+    <link href="http://example.com/2025/06/03/react%E4%BA%8B%E4%BB%B6/"/>
+    <id>http://example.com/2025/06/03/react%E4%BA%8B%E4%BB%B6/</id>
+    <published>2025-06-03T07:05:00.000Z</published>
+    <updated>2025-06-23T15:57:47.079Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;React的事件机制&quot;&gt;&lt;a href=&quot;#React的事件机制&quot; class=&quot;headerlink&quot; title=&quot;React的事件机制&quot;&gt;&lt;/a&gt;React的事件机制&lt;/h2&gt;&lt;h3 id=&quot;一、是什么&quot;&gt;&lt;a href=&quot;#一、是什么&quot;</summary>
         
       
     

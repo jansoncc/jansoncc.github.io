@@ -27,10 +27,14 @@
 <meta property="og:site_name" content="斜杠青年&#x2F;">
 <meta property="og:description" content="一、传统架构概述独立于一个个独立的github仓库 特点：  独立项目结构，所有项目都是分开的，github仓库 技术栈独立 规范化，自动化相关处理是项目间割裂 依赖管理，每个依赖之间存在版本关系 部署， docker， docker-compose部署， 自动化脚本很难形成统一（monorepo）  二、monorepo 混合项目结构，所有相关的工程形成子包进行管理 技术栈高度统一（团队基建项目">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624223858582.png">
+<meta property="og:image" content="c:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230836571.png">
+<meta property="og:image" content="c:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230858580.png">
 <meta property="article:published_time" content="2025-06-12T07:01:00.000Z">
-<meta property="article:modified_time" content="2025-06-23T15:56:21.976Z">
+<meta property="article:modified_time" content="2025-06-24T15:17:14.028Z">
 <meta property="article:author" content="Janson_Cc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624223858582.png">
 
 
 <link rel="canonical" href="http://example.com/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-1/">
@@ -166,7 +170,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BC%A0%E7%BB%9F%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、传统架构概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81monorepo"><span class="nav-number">2.</span> <span class="nav-text">二、monorepo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%9E%B6%E6%9E%84%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.</span> <span class="nav-text">1、架构方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E5%8C%85%E7%AE%A1%E7%90%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">a. 包管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E6%9E%84%E5%BB%BA%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.2.</span> <span class="nav-text">b.构建缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%A2%9E%E9%87%8F%E6%9E%84%E5%BB%BA"><span class="nav-number">2.1.3.</span> <span class="nav-text">c.增量构建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81pnpm"><span class="nav-number">2.2.</span> <span class="nav-text">2、pnpm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BC%93%E5%AD%98"><span class="nav-number">2.2.1.</span> <span class="nav-text">快速安装与缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E9%9A%94%E7%A6%BB%E4%B8%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">2.2.2.</span> <span class="nav-text">依赖隔离与版本控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%85%B3%E9%94%AE%E6%80%A7%E5%8D%A1%E7%82%B9%EF%BC%88%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">3、关键性卡点（步骤）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E9%A1%B9%E7%9B%AE%E7%BB%9F%E4%B8%80"><span class="nav-number">2.3.1.</span> <span class="nav-text">a.项目统一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-pnpm%E9%85%8D%E7%BD%AE"><span class="nav-number">2.3.2.</span> <span class="nav-text">b.pnpm配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.3.</span> <span class="nav-text">c.依赖管理</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BC%A0%E7%BB%9F%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、传统架构概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81monorepo"><span class="nav-number">2.</span> <span class="nav-text">二、monorepo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMONOREPO"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">什么是MONOREPO</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9pnpm"><span class="nav-number">2.0.1.</span> <span class="nav-text">为什么选择pnpm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%9E%B6%E6%9E%84%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.</span> <span class="nav-text">1、架构方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E5%8C%85%E7%AE%A1%E7%90%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">a. 包管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E6%9E%84%E5%BB%BA%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.2.</span> <span class="nav-text">b.构建缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%A2%9E%E9%87%8F%E6%9E%84%E5%BB%BA"><span class="nav-number">2.1.3.</span> <span class="nav-text">c.增量构建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81pnpm"><span class="nav-number">2.2.</span> <span class="nav-text">2、pnpm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BC%93%E5%AD%98"><span class="nav-number">2.2.1.</span> <span class="nav-text">快速安装与缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E9%9A%94%E7%A6%BB%E4%B8%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">2.2.2.</span> <span class="nav-text">依赖隔离与版本控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%85%B3%E9%94%AE%E6%80%A7%E5%8D%A1%E7%82%B9%EF%BC%88%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">3、关键性卡点（步骤）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%BB%84%E4%BB%B6%E5%BA%93%E5%9F%BA%E4%BA%8EMonorepo%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">三、组件库基于Monorepo架构设计有什么实践经验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E7%8A%B6%E5%92%8C%E6%8C%91%E6%88%98"><span class="nav-number">3.0.1.</span> <span class="nav-text">现状和挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">3.0.2.</span> <span class="nav-text">问题：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%B7%A5%E7%A8%8B%E5%8C%96%E8%A7%84%E8%8C%83%E4%B8%8E%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81"><span class="nav-number">3.1.</span> <span class="nav-text">1、工程化规范与代码质量保证</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%A4%A7%E5%8E%82%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Emonorepo%E8%BF%9B%E8%A1%8C%E5%B7%A5%E7%A8%8B%E5%8C%96%E6%9E%B6%E6%9E%84%E5%AE%9E%E8%B7%B5"><span class="nav-number">4.</span> <span class="nav-text">四、大厂如何基于monorepo进行工程化架构实践</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%A6%82%E4%BD%95%E5%81%9A%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E5%92%8C%E5%B7%A5%E7%A8%8B%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.</span> <span class="nav-text">五、如何做项目架构和工程化设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%80%89%E5%9E%8B%EF%BC%9A"><span class="nav-number">5.1.</span> <span class="nav-text">基础选型：</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -254,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-23 23:56:21" itemprop="dateModified" datetime="2025-06-23T23:56:21+08:00">2025-06-23</time>
+      <time title="修改时间：2025-06-24 23:17:14" itemprop="dateModified" datetime="2025-06-24T23:17:14+08:00">2025-06-24</time>
     </span>
 
   
@@ -264,14 +268,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>14 分钟</span>
     </span>
 </div>
 
@@ -296,6 +300,18 @@
 <li>规范化、自动化、流程化项目将共享</li>
 <li>依赖管理、版本统一管理</li>
 <li>部署，docker、docker-compose 自动化脚本统一部署流程</li>
+</ul>
+<h4 id="什么是MONOREPO"><a href="#什么是MONOREPO" class="headerlink" title="什么是MONOREPO"></a>什么是<code>MONOREPO</code></h4><ul>
+<li>单一代码仓库：将多个项目（子包）集中在同一个代码仓库中进行管理</li>
+<li>统一管理依赖：通过工具（<code>pnpm\lerna\Turborepo</code>）实现依赖的统一安装和版本管理</li>
+<li>共享代码：通过工作空间或内部包机制共享公共模块</li>
+<li>统一构建和发布：可以对多个子包进行一次性构建和发布</li>
+</ul>
+<h3 id="为什么选择pnpm"><a href="#为什么选择pnpm" class="headerlink" title="为什么选择pnpm"></a>为什么选择pnpm</h3><ul>
+<li>链接机制高效：使用符号链接代替直接安装，减少重复的依赖安装</li>
+<li>更快的安装速度：pnpm的缓存机制使得安装依赖速度更块</li>
+<li>原生Monorepo：支持工作空间（Workspaces）配置，方便子包间依赖管理</li>
+<li>磁盘占用更小：通过去重机制大幅减少磁盘使用量</li>
 </ul>
 <h2 id="1、架构方案"><a href="#1、架构方案" class="headerlink" title="1、架构方案"></a>1、架构方案</h2><h3 id="a-包管理"><a href="#a-包管理" class="headerlink" title="a. 包管理"></a>a. 包管理</h3><p><code>pnpm workspace yarn workspace lerna</code></p>
 <h3 id="b-构建缓存"><a href="#b-构建缓存" class="headerlink" title="b.构建缓存"></a>b.构建缓存</h3><h3 id="c-增量构建"><a href="#c-增量构建" class="headerlink" title="c.增量构建"></a>c.增量构建</h3><p><code>nx turbo</code></p>
@@ -370,7 +386,236 @@
 <p>第三阶段是<strong>构建流程自动化和性能优化</strong>。我们会根据包的类型选择不同的构建工具，例如业务系统使用 Vite 提高开发体验，组件库或脚手架类包则使用 Tsup 或 Rollup 提升构建效率。我们还会处理依赖顺序（如某些包需要前置构建）、解决循环依赖等结构性问题。在发布方面，组件或工具包通过 pnpm publish，业务系统则可以直接构建为 Docker 镜像部署。此外，还会集成自动化测试、代码规范检查、运行时监控等机制，保证整个 Monorepo 的质量和可维护性。</p>
 <p>总体来说，迁移过程重在循序渐进，通过工具组合和流程抽象，把原来割裂的工程变成统一高效的协同开发平台。</p>
 <hr>
-<h2 id="3、关键性卡点（步骤）"><a href="#3、关键性卡点（步骤）" class="headerlink" title="3、关键性卡点（步骤）"></a>3、关键性卡点（步骤）</h2><h3 id="a-项目统一"><a href="#a-项目统一" class="headerlink" title="a.项目统一"></a>a.项目统一</h3><h3 id="b-pnpm配置"><a href="#b-pnpm配置" class="headerlink" title="b.pnpm配置"></a>b.pnpm配置</h3><h3 id="c-依赖管理"><a href="#c-依赖管理" class="headerlink" title="c.依赖管理"></a>c.依赖管理</h3>
+<h2 id="3、关键性卡点（步骤）"><a href="#3、关键性卡点（步骤）" class="headerlink" title="3、关键性卡点（步骤）"></a>3、关键性卡点（步骤）</h2><ol>
+<li>项目统一<ol>
+<li><code>pnpm</code>配置</li>
+</ol>
+</li>
+<li>依赖管理</li>
+<li>统一化脚本<ul>
+<li>工程化脚本：<code>package.json 中的</code>script</li>
+<li>scripts文件夹(部署类、前端项目以外的脚本)</li>
+</ul>
+</li>
+</ol>
+<p>面试项表述：我主导了整个工程化的重构工作，基于pnpm workspace 统一化过程组织，统一自动化、流程、规范化相关内容，子包管理更清晰，基于tsup构建团队基建包，基于vite构建业务包。业务架构我主导通过微前端机制来实现，统一化主应用与子应用状态管理。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>传统架构</th>
+<th>PNPM Monorepo架构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>依赖管理</td>
+<td>每个项目单独管理依赖</td>
+<td>统一管理依赖，减少版本冲突</td>
+</tr>
+<tr>
+<td>公共模块复用</td>
+<td>需要手动同步和发布</td>
+<td>子包间直接引用，快速共享</td>
+</tr>
+<tr>
+<td>构建效率</td>
+<td>每个项目单独构建，耗时长</td>
+<td>按需构建，提升效率</td>
+</tr>
+<tr>
+<td>磁盘占用</td>
+<td>重复安装，磁盘占用高</td>
+<td>去重机制，节省磁盘空间</td>
+</tr>
+<tr>
+<td>协作成本</td>
+<td>跨项目协作复杂，测试联调耗时</td>
+<td>单仓库集中管理，便于协作</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>适应场景</p>
+<ol>
+<li>多模块项目：前端组件库，根据函数库</li>
+<li>微前端架构：多个前端项目整合为一个monorepo</li>
+<li>复杂后端项目：多个微服务的统一管理和部署</li>
+</ol>
+</li>
+<li><p>总结</p>
+<ol>
+<li>传统架构存在依赖管理困难，代码复用性低</li>
+<li><code>PNPM Monorepo</code>架构通过统一管理依赖和代码，大幅提升开发效率和协作体验</li>
+<li>架构迁移过程中需要注意工具链配置，依赖冲突解决以及构建和发布优化</li>
+</ol>
+</li>
+</ul>
+<h1 id="三、组件库基于Monorepo架构设计有什么实践经验"><a href="#三、组件库基于Monorepo架构设计有什么实践经验" class="headerlink" title="三、组件库基于Monorepo架构设计有什么实践经验"></a>三、组件库基于Monorepo架构设计有什么实践经验</h1><h3 id="现状和挑战"><a href="#现状和挑战" class="headerlink" title="现状和挑战"></a>现状和挑战</h3><ul>
+<li>组件库：提供复用的UI组件或工具函数，用于加速业务开发</li>
+<li>业务系统：作为面向最终用户的核心系统，通常依赖组件库和脚手架</li>
+</ul>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><ul>
+<li>依赖管理困难：组件库版本更新后，业务系统和脚手架同步难以保证</li>
+<li>重复构建：不同模块需要独立构建，效率低下</li>
+<li>版本冲突：各模块依赖的库版本不一致，容易导致冲突</li>
+<li>协作复杂：跨模块调试和联调需要额外的实践成本</li>
+</ul>
+<p>生产系统引用：<code>package.json</code>中引入：<code>&quot;@miaoma/ui&quot;:&quot;workspace:*&quot;</code></p>
+<p>遇到问题：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./App.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Input</span> &#125; <span class="keyword">from</span> <span class="string">&quot;@miaoma/ui&quot;</span> <span class="comment">//Cannot find module</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Input</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>解决;</p>
+<p>在<code>tsconfig.json</code>指定输出<code>moduleResolution</code>和<code> baseUrl</code>以及<code>dts declaration</code>给他设定为true；在<code>tsup.config.ts</code>部分，将<code>dts： true</code>;同时在<code>package.json</code>处设置module-esm的入口，<code>&quot;module&quot;: &quot;dist/index.mjs&quot;</code>引入以及<code>&quot;types：&quot;</code>配置，解决了这个类型报错问题。</p>
+<hr>
+<p>**面试官问：**你在项目中遇到过哪些模块导入或类型声明相关的问题？是如何解决的？</p>
+<p><strong>回答示例：</strong></p>
+<p>是的，我在使用自研组件库 <code>@miaoma/ui</code> 时，遇到了 <code>Cannot find module</code> 的报错，主要原因是 TypeScript 无法解析该模块的类型声明和模块路径。</p>
+<p>为了解决这个问题，我做了如下几步：</p>
+<ol>
+<li><strong>配置 TypeScript（tsconfig.json）：</strong><ul>
+<li>将 <code>moduleResolution</code> 设置为 <code>&quot;node&quot;</code>，确保能正确解析 <code>node_modules</code> 中的模块。</li>
+<li>设置 <code>baseUrl</code> 为 <code>&quot;.&quot;</code>，用于简化路径解析。</li>
+<li>启用 <code>declaration: true</code>，自动生成 <code>.d.ts</code> 类型声明文件，方便其他项目引用时能获取类型信息。</li>
+</ul>
+</li>
+<li><strong>配置打包工具（tsup.config.ts）：</strong><ul>
+<li>设置 <code>dts: true</code>，确保组件库构建时会生成类型文件输出到 <code>dist/</code> 目录。</li>
+</ul>
+</li>
+<li><strong>调整组件库的 package.json：</strong><ul>
+<li>添加 <code>&quot;module&quot;: &quot;dist/index.mjs&quot;</code>，明确指定 ESM 构建产物路径。</li>
+<li>添加 <code>&quot;types&quot;: &quot;dist/index.d.ts&quot;</code>，告知 TypeScript 类型声明文件位置。</li>
+</ul>
+</li>
+</ol>
+<p>最终通过这几个步骤，成功解决了模块导入失败和类型缺失的问题，使得组件库可以在其他项目中被正确引用和使用，同时保持良好的类型提示和开发体验</p>
+<hr>
+<h2 id="1、工程化规范与代码质量保证"><a href="#1、工程化规范与代码质量保证" class="headerlink" title="1、工程化规范与代码质量保证"></a>1、工程化规范与代码质量保证</h2><ul>
+<li><p>统一代码规范</p>
+<p><code>ESLint</code>：统一代码风格和语法检查</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add eslint -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Prettier</code>：格式化代码，提高可读性</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add prettier -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交规范</p>
+<p><code>Commitlint</code>:规范提交信息</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add <span class="meta">@commitlint</span>/config-conventional <span class="meta">@commitlint</span>/cli -D</span><br></pre></td></tr></table></figure>
+
+<p>配置<code>commitlint.config.js</code></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; <span class="attr">extends</span>: [<span class="string">&quot;commitlint/config-conventional&quot;</span>]&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自动化检查</p>
+<ol>
+<li><p><code>Husky</code>:在Git钩子中集成自动检查</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add husky -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化<code>Husky</code></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置预提交检查脚本</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .<span class="property">husky</span>/pre-commit <span class="string">&quot;pnpm lint&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h1 id="四、大厂如何基于monorepo进行工程化架构实践"><a href="#四、大厂如何基于monorepo进行工程化架构实践" class="headerlink" title="四、大厂如何基于monorepo进行工程化架构实践"></a>四、大厂如何基于<code>monorepo</code>进行工程化架构实践</h1><table>
+<thead>
+<tr>
+<th>公司</th>
+<th>项目&#x2F;模块</th>
+<th>地址</th>
+<th>简要说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>阿里</td>
+<td>Ant Design</td>
+<td></td>
+<td>企业级UI设计语言与React组件库</td>
+</tr>
+<tr>
+<td>阿里</td>
+<td>ahooks</td>
+<td></td>
+<td>高质量的React Hokks库</td>
+</tr>
+<tr>
+<td>阿里</td>
+<td>BizCharts</td>
+<td></td>
+<td>基于G2的React数据可视化库</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>Arco Design</td>
+<td></td>
+<td>企业级设计体系与组件库 支持React和Vue</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>VTable</td>
+<td></td>
+<td>面向大数据展示的可视化表格库</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>rsbuild</td>
+<td></td>
+<td>高性能构建工具，类似vite和esbuild</td>
+</tr>
+</tbody></table>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624223858582.png" alt="image-20250624223858582"></p>
+<p>适合B端架构设计</p>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230836571.png" alt="image-20250624230836571"></p>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230858580.png" alt="image-20250624230858580"></p>
+<h1 id="五、如何做项目架构和工程化设计"><a href="#五、如何做项目架构和工程化设计" class="headerlink" title="五、如何做项目架构和工程化设计"></a>五、如何做项目架构和工程化设计</h1><p>项目架构通常指项目目录结构，构建流程、规范等</p>
+<p><code>monorepo</code>：单一代码仓库，比较主流的项目组织方式，允许在一个仓库中组织多个项目，相比于多仓库，它在大型组织和复杂项目中具有许多优势</p>
+<ul>
+<li>依赖管理<ol>
+<li>统一的依赖管理：所有项目共享一个依赖管理系统，减少了版本冲突问题</li>
+<li>版本同步：确保多个项目之间使用相同版本的依赖，避免依赖版本不一致导致的错误</li>
+</ol>
+</li>
+<li>代码复用<ol>
+<li>模块共享：多个项目共享相同的模块和库，减少代码重复</li>
+<li>统一工具链：可与为所有项目配置相同的工具链（编译器，测试框架）</li>
+</ol>
+</li>
+<li>协作效率<ol>
+<li>一致的代码风格：统一代码规范和风格</li>
+<li>跨项目变更：在<code>monorepo</code>中，跨项目变更可以一次提交中完成，避免多个仓库提交和同步的问题</li>
+<li>集中化的CI&#x2F;CD：设置统一的持续集成和持续部署流程，简化自动化构建和部署流程</li>
+</ol>
+</li>
+<li>可维护性<ol>
+<li>简化依赖图：通过集中管理项目之间的依赖关系，可以更清晰的理解和维护项目之间的依赖</li>
+<li>快速重构：更方便进行大规模的代码重构，因为所有代码在一个仓库中，便于搜索和替换</li>
+</ol>
+</li>
+<li>版本控制：<ol>
+<li>单一版本历史：所有项目记录在一个仓库中，便于查看项目整体演进流程</li>
+<li>简化分支管理：分支和合并操作变得更简便，减少跨仓库操作的复杂性</li>
+</ol>
+</li>
+<li>DX<ol>
+<li>统一的开发环境：共享相同的开发环境设置，减少开发者在不同项目间切换时的学习成本</li>
+<li>更快的开发周期：减少了跨仓库的协调工作，开发周期缩短</li>
+</ol>
+</li>
+</ul>
+<p>例子：React</p>
+<h2 id="基础选型："><a href="#基础选型：" class="headerlink" title="基础选型："></a>基础选型：</h2><ol>
+<li>状态管理</li>
+<li>路由管理</li>
+<li>表单管理</li>
+<li>API请求与数据获取</li>
+<li>样式处理</li>
+<li>构建与打包工具</li>
+<li>测试</li>
+<li>类型检查</li>
+<li>代码质量与开发工具</li>
+<li>持续继承和部署（CI&#x2F;CD）</li>
+</ol>
+
     </div>
 
     
@@ -439,14 +684,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">11k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">39 分钟</span>
   </span>
 </div>
 

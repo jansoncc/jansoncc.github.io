@@ -1,6 +1,541 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>以太坊</title>
+    <url>/2025/06/10/Ganache%E5%AE%89%E8%A3%85%E4%B8%8E%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="Ganache–以太坊部署-智能合约测试"><a href="#Ganache–以太坊部署-智能合约测试" class="headerlink" title="Ganache–以太坊部署+智能合约测试"></a>Ganache–以太坊部署+智能合约测试</h2><p>资源链接：</p>
+<p><code>Ganache</code>：<a href="https://archive.trufflesuite.com/ganache/">Ganache - Truffle Suite</a></p>
+<p><code>Remix</code>:<a href="https://remix.ethereum.org/">Remix - Ethereum IDE</a></p>
+<p><code>MetaMask</code>:浏览器插件安装，记得在remix界面打开<code>MetaMask</code>，确保与<code>Remix</code>连接</p>
+<h3 id="1、第一步：准备工作"><a href="#1、第一步：准备工作" class="headerlink" title="1、第一步：准备工作"></a>1、第一步：准备工作</h3><p>确保系统安装了<code>node</code>、<code>npm</code></p>
+<h3 id="下载安装Ganache"><a href="#下载安装Ganache" class="headerlink" title="下载安装Ganache"></a>下载安装Ganache</h3><p>Ganache是Truffle Suite的一部分，是一个用于以太坊区块链的个人区块链模拟器。它可以在本地计算机上快速启动一个以太坊网络，帮助开发者进行智能合约的开发、测试和部署。</p>
+<h4 id="下载图形化界面"><a href="#下载图形化界面" class="headerlink" title="下载图形化界面"></a>下载图形化界面</h4><p>进入Ganache官网–<a href="https://archive.trufflesuite.com/ganache/">Ganache - Truffle Suite</a>，点击download即可下载适配电脑的版本，下载后的文件为appx版本，将其改为.exe即可成功运行（也可以直接点击运行）</p>
+<h3 id="2、开始"><a href="#2、开始" class="headerlink" title="2、开始"></a>2、开始</h3><h4 id="2-1：以太坊设置"><a href="#2-1：以太坊设置" class="headerlink" title="2.1：以太坊设置"></a>2.1：以太坊设置</h4><ul>
+<li>主要查看链上操作的gas变化以及通过设置中的Serve的RPC地址与<code>MetaMask</code>相连接</li>
+</ul>
+<p>双击打开，点击QUICKSTART，即可启动一个本地以太坊区块链，并显示10个预设账户及其相关信息，如下图所示</p>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250620172318601.png" alt="image-20250620172318601"></p>
+<hr>
+<p>Address：以太坊地址，后面连接remix需要进行比对</p>
+<p>Balance：该地址持有的ETH数量</p>
+<p>TX Count：交易计数–后续当我们成功将智能合约部署或发起相关链上操作时，该值会发生变化</p>
+<p>Index：该地址在此列表（账号）中的索引</p>
+<h4 id="2-2：智能合约的设置"><a href="#2-2：智能合约的设置" class="headerlink" title="2.2：智能合约的设置"></a>2.2：智能合约的设置</h4><p>使用Remix的网页端，可以在左下角的设置（齿轮图标）中设置页面背景颜色及语言</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>React事件</title>
+    <url>/2025/06/03/react%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="React的事件机制"><a href="#React的事件机制" class="headerlink" title="React的事件机制"></a>React的事件机制</h2><h3 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h3><p>React基于浏览器的事件机制自身实现了一套事件机制，包括事件注册、事件注册、事件冒泡、事件派发。在react中，我，们称为合成事件，合成事件就是react模拟原生DOM事件所有能力的一个事件对象。可以这么理解：原生浏览器事件的跨浏览器包装器</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过合成事件调用</span></span><br><span class="line"><span class="keyword">const</span> button = <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>= <span class="string">&#123;handleClick&#125;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 原生事件调用</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 获取原生dom事件</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">nativeEvent</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><ol>
+<li><p>事件名称命名：</p>
+<ul>
+<li><p>&#96;JavaScript&#96;&#96;</p>
+<p><code>&lt;button onclick=&quot;handleClick()&quot;&gt;按钮&lt;/button&gt;</code></p>
+</li>
+<li><p><code>React</code></p>
+<p><code>const button = &lt;button onClick=&#123;handleClick&#125;&gt;按钮&lt;/button&gt;</code></p>
+</li>
+</ul>
+<p>react通过驼峰的命名方式，原生是小写的方式，事件绑定的函数不同：react：传入对应的函数；原生：字符串</p>
+</li>
+<li><p>事件处理函数不同：</p>
+<p><code>React</code>传入一个回调函数，原生传入一个字符串</p>
+</li>
+</ol>
+<h3 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h3>]]></content>
+  </entry>
+  <entry>
+    <title>前端场景</title>
+    <url>/2025/06/02/%E5%89%8D%E7%AB%AF%E5%9C%BA%E6%99%AF/</url>
+    <content><![CDATA[<h2 id="一、React首页白屏可能是什么问题引起的？怎么解决"><a href="#一、React首页白屏可能是什么问题引起的？怎么解决" class="headerlink" title="一、React首页白屏可能是什么问题引起的？怎么解决"></a>一、React首页白屏可能是什么问题引起的？怎么解决</h2><p><a href="https://www.oryoy.com/news/react-xing-neng-you-hua-ji-qiao-jie-jue-shou-ye-bai-ping-jia-zai-wen-ti-ti-sheng-yong-hu-ti-yan.html">React性能优化技巧：解决首页白屏加载问题，提升用户体验 - 云原生实践</a></p>
+<p>白屏主要发生在首次加载时，主要原因包括</p>
+<ol>
+<li>静态资源路径错误。</li>
+<li>依赖包没有正确安装或版本兼容问题</li>
+<li>网络请求失败</li>
+<li>react的路由配置错误</li>
+<li>构建工具的问题，比如 Webpack 配置错误。</li>
+<li><strong>资源加载阻塞</strong>：React应用的JavaScript文件较大，加载和解析时间较长，导致浏览器在渲染页面之前需要等待。</li>
+<li><strong>同步渲染</strong>：React默认的渲染方式是同步的，即在所有JavaScript代码执行完毕后才会进行DOM渲染。</li>
+<li><strong>服务端渲染（SSR）缺失</strong>：单页应用（SPA）通常依赖客户端渲染，服务端返回的初始HTML内容较少，导致浏览器渲染延迟。</li>
+</ol>
+<ul>
+<li><p>解决办法：</p>
+<ol>
+<li><p>确保静态资源的路径配置正确，检查 React项目的 config文件或者 Webpack 的配置文件。</p>
+</li>
+<li><p>确认所有依赖包已经正确安装，版本兼容。如果有多个版本的 React 依赖包如react router&#x2F;redux，可能会导致冲突</p>
+</li>
+<li><p>确保网络请求的 API正常工作，可以通过 console日志或<code>chrom devtools</code> 验证</p>
+</li>
+<li><p>检查 <code>ReactRouter </code>的配置，包括路径匹配和重定向设置。</p>
+</li>
+<li><p>审查Webpack配置，特别是 output和 <code>publicPath</code> 设置</p>
+</li>
+<li><p>使用服务端渲染（SSR）</p>
+<p>使用next.js等SSR框架，在服务器上渲染React组件，生成完整的HTML，然后发送到客户端</p>
+</li>
+<li><p>预渲染：是一种介于客户端渲染和服务端渲染之间的技术，适用于静态内容的页面。</p>
+<ul>
+<li><p>使用prerender-spa-plugin等工具。</p>
+</li>
+<li><p>在构建阶段生成静态HTML文件</p>
+</li>
+<li><p>在用户访问时直接返回预渲染的HTML。</p>
+</li>
+</ul>
+<p>注意：刷新时有时会闪烁以下首次页面，这时解决方法，我们可以设置两个预渲染页面（a.html-首页；b.html-loading图）这时候，如果加载首页，直接a.html；如果加载其他的页码并没有设置预渲染页面，就用b.html，这时候就需要用nginx配置</p>
+</li>
+<li><p>懒加载与代码拆分</p>
+<p>可以将应用拆分成多个小的代码块，按需加载，减少初始加载时间。</p>
+<ul>
+<li>使用<code>React.lazy</code>和Suspense实现组件级别的懒加载。</li>
+<li>使用webpack的code splitting功能进行代码拆分。</li>
+</ul>
+</li>
+<li><p>优化资源加载</p>
+<p>通过压缩代码、优化图片、使用CDN等方式，可以减少资源加载时间。</p>
+<ul>
+<li>使用<code>UglifyJS</code>、<code>Terser</code>等工具压缩JavaScript代码。</li>
+<li>使用<code>ImageOptim</code>等工具压缩图片。</li>
+<li>使用CDN加速资源加载</li>
+</ul>
+</li>
+<li><p>添加启动屏，缓解用户对白屏的感知</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="二、前端如何处理后端接口一次性返回的超大树形结构数据"><a href="#二、前端如何处理后端接口一次性返回的超大树形结构数据" class="headerlink" title="二、前端如何处理后端接口一次性返回的超大树形结构数据"></a>二、前端如何处理后端接口一次性返回的超大树形结构数据</h2><p>对于前端来讲，关键在于减少渲染压力、提高用户的交互体验，一般考虑以下几个方面：</p>
+<ol>
+<li><p>分页加载：将数据页分成多页，用户滚动或者点击“加载更多“的时候加载新一页的数据</p>
+</li>
+<li><p>虚拟滚动：只在视口内渲染一定数量的节点，随着用户滚动动态加载更多的节点。</p>
+<p>树形组件库：React的react-virtualized</p>
+</li>
+<li><p>懒加载：按需加载数据，只有在用户展开某个节点时才请求该节点的子节点数据</p>
+<p>除了懒加载数据，惰性渲染也是一种优化手段，即只在需要的时候才渲染DOM节点。比如， 当用户展开树节点时才渲染其子节点</p>
+</li>
+<li><p>批量处理：将大数据集分块处理，避免一次性渲染大量数据，造成浏览器卡顿。</p>
+</li>
+<li><p><code>Web Workers</code>：当进行复杂的计算或处理时使用<code>Web Workers</code>，可 以将计算从主线程分离出来，避免主线程阻塞，提高性能。</p>
+</li>
+<li><p>使用缓存：对于大型树形数据，可以考虑使用本地缓存(如<code>localstorage或IndexedDB</code>)来存储已经加载过 的数据，避免每次用户操作时都去请求后端</p>
+</li>
+<li><p>树形结构优化:优化树形结构数据本身，例如对于深度很深但不常用的节点，考虑在后端进行预处理筛选， 或者返回数据的层次结构时，先返回主要的部分，再按照需求加载剩余的部分</p>
+</li>
+</ol>
+<h2 id="三、使用同一个链接，如何实现-PC-打开是-web-应用、手机打-开是一个-H5-应用"><a href="#三、使用同一个链接，如何实现-PC-打开是-web-应用、手机打-开是一个-H5-应用" class="headerlink" title="三、使用同一个链接，如何实现 PC 打开是 web 应用、手机打 开是一个 H5 应用"></a>三、使用同一个链接，如何实现 PC 打开是 web 应用、手机打 开是一个 H5 应用</h2><p>背景：一个链接访问页面，同时适配PC、Mobile</p>
+<ul>
+<li><p>先识别端，根据不同的端进行内容渲染</p>
+<h3 id="1、-识别端"><a href="#1、-识别端" class="headerlink" title="1、 识别端"></a>1、 识别端</h3><ol>
+<li><p><code>Js</code>：识别  <code>userAgent</code> 用户代理</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(navigator.<span class="property">userAgent</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断：通过正则 –&gt;元字符、匹配</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">isMobile</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="regexp">/Mobi|Android/i</span>.<span class="title function_">test</span>(navigator.<span class="property">userAgent</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断</span></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_">isMobile</span>()) &#123;</span><br><span class="line">  <span class="comment">// 1、跳转到mobile.html</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;/mobile.html&quot;</span></span><br><span class="line">  <span class="comment">// 2、加载不同的css文件</span></span><br><span class="line">  <span class="comment">// 3、运行时的代码里面通过提工的isMobile来做处理</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;/desktop.html&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// react</span></span><br><span class="line">&lt;<span class="title class_">DeviceProvider</span> value=&#123;&#123;<span class="attr">type</span>: <span class="title function_">isMobile</span>()&#125;&#125;&gt;&lt;/<span class="title class_">DeviceProvider</span>&gt;</span><br><span class="line"><span class="comment">// 子组件使用</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Header</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="comment">//拿到value</span></span><br><span class="line">   <span class="keyword">const</span> &#123;type&#125; = <span class="title function_">useContext</span>(<span class="title class_">DeviceContext</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种方式是通过前端进行判断</p>
+<p>问题：如果PC端不断的缩小，这个内容页不会发生变化</p>
+</li>
+</ol>
+<h3 id="2、响应式"><a href="#2、响应式" class="headerlink" title="2、响应式"></a>2、响应式</h3><p>媒体查询、flex布局</p>
+</li>
+<li><p>框架内完成适配-react</p>
+<p>封装一个hook</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; useMediaQuery &#125; <span class="keyword">from</span> <span class="string">&#x27;react-responsive&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">   <span class="keyword">const</span> isDeskTOP = <span class="title function_">useMediaQuery</span>(&#123; <span class="attr">minWidth</span>: <span class="number">1024</span>&#125;);</span><br><span class="line">   <span class="keyword">const</span> isMobile = <span class="title function_">useMediaQuery</span>(&#123; <span class="attr">maxWidth</span>: <span class="number">1024</span>&#125;);</span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         &#123;isDesktop &amp;&amp; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Desktop Web Application<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">p</span>&gt;</span>This content is displayed on Desktop devices.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         )&#125; </span></span><br><span class="line"><span class="language-xml">          &#123;isMobile &amp;&amp; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Mobile H5 Application<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">p</span>&gt;</span>This content is displayed on Mobile devices.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         )&#125;   </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="四、如何实现网页加载进度条"><a href="#四、如何实现网页加载进度条" class="headerlink" title="四、如何实现网页加载进度条"></a>四、如何实现网页加载进度条</h2><p>问题：</p>
+<ol>
+<li>怎么拿到进度<ul>
+<li>方法兼容性</li>
+<li>fetch、ajax</li>
+</ul>
+</li>
+<li>怎么绘制进度<ul>
+<li>dom</li>
+<li>svg</li>
+<li>canvs</li>
+</ul>
+</li>
+</ol>
+<h3 id="1、方案1"><a href="#1、方案1" class="headerlink" title="1、方案1"></a>1、方案1</h3><h4 id="页面加载"><a href="#页面加载" class="headerlink" title="页面加载"></a>页面加载</h4><p>监听页面加载的事件， 来控制进度条的；  创建对应的， 监听你的整个控制条的进度</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#progress-bar</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="number">#4caf50</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">z-index</span>: <span class="number">9999</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>: width <span class="number">0.4s</span> ease;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">simulateLoadingProgress</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> progressBar = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">let</span> width = <span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> interval = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">if</span> (width &gt;= <span class="number">100</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">clearInterval</span>(interval);</span></span><br><span class="line"><span class="language-javascript">                    progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;100%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                        progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;0%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;, <span class="number">500</span>);</span></span><br><span class="line"><span class="language-javascript">                &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                    width += <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">                    progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;width&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;, <span class="number">100</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">simulateLoadingProgress</span>();</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="请求实现"><a href="#请求实现" class="headerlink" title="请求实现"></a>请求实现</h4><p>Ajax 拿到进度， svg&#x2F;dom 绘制</p>
+<p>请求拿到进度。其实绘制的部分逻辑可以复用，只是它驱动的事件变了，不是load事件驱动它，而是整个请求过程中给你返回值的那个进度，后端处理了百分之多少拿的</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#progress-bar</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">z-index</span>: <span class="number">9999</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>: width <span class="number">0.4s</span> ease;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">loadResource</span>(<span class="params">url</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// 监听进度 通过onprogress去监听</span></span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="property">onprogress</span> = <span class="keyword">function</span>(<span class="params">event</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">if</span> (event.<span class="property">lengthComputable</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="keyword">const</span> precentComplete = (event.<span class="property">loaded</span> / event.<span class="property">total</span>) * <span class="number">100</span>; </span></span><br><span class="line"><span class="language-javascript">                        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;precentComplete&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">if</span> (xhr.<span class="property">status</span> === <span class="number">200</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;100%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;0%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;, <span class="number">500</span>);</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;;</span></span><br><span class="line"><span class="language-javascript">            xhr.<span class="title function_">send</span>();</span></span><br><span class="line"><span class="language-javascript">        </span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 模拟加载资源</span></span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> resourceUrl = <span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">loadResource</span>(<span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>fetch实现</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fetch 可不可以实现 --&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- 可以实现 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">loadResource</span>(<span class="params">url</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">fetch</span>(url)</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">blob</span>())</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">then</span>(<span class="function"><span class="params">blob</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>();</span></span><br><span class="line"><span class="language-javascript">            reader.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> progress = (e.<span class="property">loaded</span> / e.<span class="property">total</span>) * <span class="number">100</span>;</span></span><br><span class="line"><span class="language-javascript">                <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;progress&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">            reader.<span class="title function_">readAsDataURL</span>(blob);</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;加载失败:&#x27;</span>, error);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> resourceUrl = <span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">loadResource</span>(<span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>react框架实现</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span> <span class="keyword">as</span> <span class="title class_">Router</span>, <span class="title class_">Switch</span>, <span class="title class_">Route</span>, useHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">NProgress</span> <span class="keyword">from</span> <span class="string">&#x27;nprogress&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;nprogress/nprogress.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Home</span> = (<span class="params"></span>) =&gt; <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">About</span> = (<span class="params"></span>) =&gt; <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>About<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> history = <span class="title function_">useHistory</span>();</span><br><span class="line"></span><br><span class="line">    <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title class_">NProgress</span>.<span class="title function_">configure</span>(&#123; <span class="attr">showSpinner</span>: <span class="literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">uhandleStart</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">            <span class="title class_">NProgress</span>.<span class="title function_">start</span>();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">handleStop</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">            <span class="title class_">NProgress</span>.<span class="title function_">done</span>();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        history.<span class="title function_">listen</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">handleStart</span>();</span><br><span class="line">            <span class="title function_">handleStop</span>();</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            history.<span class="title function_">listen</span>().<span class="title function_">cancel</span>();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;, [history]);</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、如何禁止别人调试前端页面代码"><a href="#五、如何禁止别人调试前端页面代码" class="headerlink" title="五、如何禁止别人调试前端页面代码"></a>五、如何禁止别人调试前端页面代码</h2><ol>
+<li>禁用右键：通过JS禁用右键点击事件</li>
+<li>禁用F12和开发者工具</li>
+<li>代码混淆和压缩</li>
+<li>检测工具开关开发者工具</li>
+<li>真正关键的逻辑和数据，放在后端实现，并确保通过API的安全调用等措施确保安全性</li>
+</ol>
+<h2 id="六、、如何使用-JavaScript-实现一个轻量级本地存储方案，用于保存和读取用户偏好设置"><a href="#六、、如何使用-JavaScript-实现一个轻量级本地存储方案，用于保存和读取用户偏好设置" class="headerlink" title="六、、如何使用 JavaScript 实现一个轻量级本地存储方案，用于保存和读取用户偏好设置"></a>六、、如何使用 JavaScript 实现一个轻量级本地存储方案，<strong>用于保存和读取用户偏好设置</strong></h2><p>使用localStorage非常简单，可以通过以下步骤来实现：</p>
+<ol>
+<li>使用<code>localStorage.setItem(key, value)</code>方法将数据存储到localStorage中，key是要存储的数据的键，value是对应的值。</li>
+<li>使用<code>localStorage.getItem(key)</code>方法可以获取之前存储的数据，key是要获取的数据的键。</li>
+<li>使用<code>localStorage.removeItem(key)</code>方法可以删除特定键的数据。</li>
+<li>使用<code>localStorage.clear()</code>方法可以清空localStorage中的所有数据。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="七、使用react设计一个过滤器"><a href="#七、使用react设计一个过滤器" class="headerlink" title="七、使用react设计一个过滤器"></a>七、使用react设计一个过滤器</h2><p><a href="https://www.oryoy.com/news/react-shi-zhan-gao-xiao-shi-yong-guo-lv-qi-shi-xian-shu-ju-dong-tai-shai-xuan-yu-zhan-shi.html">React实战：高效使用过滤器实现数据动态筛选与展示 - 云原生实践</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>前端工程化-1</title>
+    <url>/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-1/</url>
+    <content><![CDATA[<h1 id="一、传统架构概述"><a href="#一、传统架构概述" class="headerlink" title="一、传统架构概述"></a>一、传统架构概述</h1><p>独立于一个个独立的<code>github</code>仓库</p>
+<p>特点：</p>
+<ul>
+<li>独立项目结构，所有项目都是分开的，<code>github</code>仓库</li>
+<li>技术栈独立</li>
+<li>规范化，自动化相关处理是项目间割裂</li>
+<li>依赖管理，每个依赖之间存在版本关系</li>
+<li>部署， docker， docker-compose部署， 自动化脚本很难形成统一（<code>monorepo</code>）</li>
+</ul>
+<h1 id="二、monorepo"><a href="#二、monorepo" class="headerlink" title="二、monorepo"></a>二、monorepo</h1><ul>
+<li>混合项目结构，所有相关的工程形成子包进行管理</li>
+<li>技术栈高度统一（团队基建项目、业务项目、子服务、技术栈）</li>
+<li>规范化、自动化、流程化项目将共享</li>
+<li>依赖管理、版本统一管理</li>
+<li>部署，docker、docker-compose 自动化脚本统一部署流程</li>
+</ul>
+<h4 id="什么是MONOREPO"><a href="#什么是MONOREPO" class="headerlink" title="什么是MONOREPO"></a>什么是<code>MONOREPO</code></h4><ul>
+<li>单一代码仓库：将多个项目（子包）集中在同一个代码仓库中进行管理</li>
+<li>统一管理依赖：通过工具（<code>pnpm\lerna\Turborepo</code>）实现依赖的统一安装和版本管理</li>
+<li>共享代码：通过工作空间或内部包机制共享公共模块</li>
+<li>统一构建和发布：可以对多个子包进行一次性构建和发布</li>
+</ul>
+<h3 id="为什么选择pnpm"><a href="#为什么选择pnpm" class="headerlink" title="为什么选择pnpm"></a>为什么选择pnpm</h3><ul>
+<li>链接机制高效：使用符号链接代替直接安装，减少重复的依赖安装</li>
+<li>更快的安装速度：pnpm的缓存机制使得安装依赖速度更块</li>
+<li>原生Monorepo：支持工作空间（Workspaces）配置，方便子包间依赖管理</li>
+<li>磁盘占用更小：通过去重机制大幅减少磁盘使用量</li>
+</ul>
+<h2 id="1、架构方案"><a href="#1、架构方案" class="headerlink" title="1、架构方案"></a>1、架构方案</h2><h3 id="a-包管理"><a href="#a-包管理" class="headerlink" title="a. 包管理"></a>a. 包管理</h3><p><code>pnpm workspace yarn workspace lerna</code></p>
+<h3 id="b-构建缓存"><a href="#b-构建缓存" class="headerlink" title="b.构建缓存"></a>b.构建缓存</h3><h3 id="c-增量构建"><a href="#c-增量构建" class="headerlink" title="c.增量构建"></a>c.增量构建</h3><p><code>nx turbo</code></p>
+<h2 id="2、pnpm"><a href="#2、pnpm" class="headerlink" title="2、pnpm"></a>2、<code>pnpm</code></h2><p><code>npm yarn cnpm</code></p>
+<ul>
+<li><p>优势</p>
+<ol>
+<li><p>软链接：相当于在window中创建一个快捷键，在项目中间有大量的这种快捷方式，通过这种快捷方式能够之间指向软件本体的那个位置</p>
+<p>在我们用的这些包里面，它通过软连接的方式链接到你的项目工程在装依赖的时候，它会装到一个集中仓库，它在集中仓库中取查找对应的依赖，这个过程中又涉及许多寻址–加快搜索的机制</p>
+</li>
+<li><p>缓存机制</p>
+<p>寻址–中心化思想</p>
+<p>安装时候并行的提速，以往有</p>
+</li>
+<li><p>原生支持 workspace</p>
+</li>
+<li><p>磁盘占用少</p>
+</li>
+</ol>
+<p>总结：中心化思想解决依赖复用问题</p>
+</li>
+</ul>
+<hr>
+<p><strong>问题1：你了解 pnpm 吗？它比 npm &#x2F; yarn 有哪些优势？</strong></p>
+<p>它最大的优势之一是使用了<strong>软链接机制</strong>：在安装依赖时，不再将依赖复制到每个项目中，而是将它们统一保存在一个中央存储区中，通过软链接（就像 Windows 中的快捷方式）来指向这些真实依赖。这种方式极大减少了磁盘占用，同时提升了模块复用率。此外，<code>pnpm</code> 还有很好的<strong>缓存机制和并行安装能力</strong>，能有效提升安装速度。它还<strong>原生支持 workspace</strong>，在管理多个子项目时比 npm&#x2F;yarn 更加高效。整体来看，<code>pnpm</code> 是一个以‘中心化依赖复用’为核心思想、兼顾性能和磁盘效率的现代包管理工具，非常适合工程规模较大的场景。</p>
+<p>相比 npm 的扁平结构和 yarn 的 node_modules 链接方式，pnpm 会严格按照依赖声明生成树状结构，能更早发现重复或错误依赖。</p>
+<p>在组件库开发中，我使用了 pnpm 来搭建 monorepo 结构。pnpm 原生支持 workspace，我们把每个组件作为独立的子包管理，同时通过软链接机制在本地模拟依赖关系，开发时修改某个子包能立即生效，极大提高了联动调试效率。相比 npm 或 yarn，pnpm 的依赖安装速度更快、磁盘占用更小，并且强依赖隔离能防止组件间的幽灵依赖和版本冲突问题。整体体验非常适合做组件库这类多模块、多依赖、迭代频繁的工程。</p>
+<h3 id="快速安装与缓存"><a href="#快速安装与缓存" class="headerlink" title="快速安装与缓存"></a>快速安装与缓存</h3><ul>
+<li>pnpm 的安装非常快，支持并行下载；</li>
+<li>所有安装包统一缓存，无需多次重复拉取；</li>
+<li>对于频繁运行的构建脚本（如 Storybook&#x2F;Vite 打包），速度有明显优势。</li>
+</ul>
+<h3 id="依赖隔离与版本控制"><a href="#依赖隔离与版本控制" class="headerlink" title="依赖隔离与版本控制"></a>依赖隔离与版本控制</h3><ul>
+<li>pnpm 遵循严格的依赖隔离机制，不允许未声明的依赖被隐式使用；</li>
+<li>每个包需要明确声明依赖，方便组件库后续维护、升级和发布；</li>
+<li>可配合 <code>pnpm recursive publish</code> 实现按包独立版本管理或统一发布。</li>
+</ul>
+<p><strong>问题2：怎么将传统架构的项目迁移到monorepo架构</strong></p>
+<p>分为三阶段解决</p>
+<ol>
+<li><p>解决传统架构的基础痛点</p>
+<ul>
+<li>代码集中化管理，将多个关联的项目统一到一个 github 仓库</li>
+<li>工具引入：pnpm workspace</li>
+<li>CI&#x2F;CD重构：</li>
+</ul>
+</li>
+<li><p>阶段2：具体的monorepo架构</p>
+<ul>
+<li>公共模块抽离</li>
+<li>基于pnpm turbo 解决子包与主包的关系</li>
+</ul>
+</li>
+<li><p>自动化构建流程优化</p>
+<ul>
+<li><p>打包方案：vite、webpack、其他的方案rollup、tsup、esbuild、swc，rolldown</p>
+<p>成本最低，见效最快：业务系统：vite；脚手架，UI库选择tsup</p>
+</li>
+<li><p>构建流程优化，依赖关系解决（循环依赖引用等问题处理）、哪些包需要前置（后置）构建</p>
+</li>
+<li><p>发布，分离  业务系统发布：构建成docker镜像，或直接部署</p>
+</li>
+<li><p>监控和测试</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>回答：</p>
+<p>如果让我负责将传统架构的前端项目迁移到 Monorepo 架构，我会分三个阶段来推进，逐步解决实际问题、稳步落地。</p>
+<p>第一阶段是<strong>解决传统架构的基础痛点</strong>。我们通常会面对多个项目分散、版本不一致、依赖重复的问题，因此首先要<strong>将多个关联项目集中到同一个 Git 仓库</strong>，实现集中化管理。随后引入 <strong>pnpm workspace</strong> 作为包管理方案，它原生支持多包协同，能够高效地处理依赖复用与版本一致性。与此同时，我们还会<strong>重构 CI&#x2F;CD 流程</strong>，将原本分散的构建&#x2F;测试&#x2F;部署任务统一管理，降低运维复杂度。</p>
+<p>第二阶段是<strong>构建具体的 Monorepo 架构</strong>。这一步我们会对多个项目进行依赖分析，把重复使用的部分抽成<strong>公共模块</strong>（如 utils、hooks、ui 组件），然后用 <code>pnpm</code> 和 <code>Turborepo</code> 来管理子包与主包之间的构建关系，支持依赖跟踪、缓存和并行任务，确保各模块之间构建高效且解耦。</p>
+<p>第三阶段是<strong>构建流程自动化和性能优化</strong>。我们会根据包的类型选择不同的构建工具，例如业务系统使用 Vite 提高开发体验，组件库或脚手架类包则使用 Tsup 或 Rollup 提升构建效率。我们还会处理依赖顺序（如某些包需要前置构建）、解决循环依赖等结构性问题。在发布方面，组件或工具包通过 pnpm publish，业务系统则可以直接构建为 Docker 镜像部署。此外，还会集成自动化测试、代码规范检查、运行时监控等机制，保证整个 Monorepo 的质量和可维护性。</p>
+<p>总体来说，迁移过程重在循序渐进，通过工具组合和流程抽象，把原来割裂的工程变成统一高效的协同开发平台。</p>
+<hr>
+<h2 id="3、关键性卡点（步骤）"><a href="#3、关键性卡点（步骤）" class="headerlink" title="3、关键性卡点（步骤）"></a>3、关键性卡点（步骤）</h2><ol>
+<li>项目统一<ol>
+<li><code>pnpm</code>配置</li>
+</ol>
+</li>
+<li>依赖管理</li>
+<li>统一化脚本<ul>
+<li>工程化脚本：<code>package.json 中的</code>script</li>
+<li>scripts文件夹(部署类、前端项目以外的脚本)</li>
+</ul>
+</li>
+</ol>
+<p>面试项表述：我主导了整个工程化的重构工作，基于pnpm workspace 统一化过程组织，统一自动化、流程、规范化相关内容，子包管理更清晰，基于tsup构建团队基建包，基于vite构建业务包。业务架构我主导通过微前端机制来实现，统一化主应用与子应用状态管理。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>传统架构</th>
+<th>PNPM Monorepo架构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>依赖管理</td>
+<td>每个项目单独管理依赖</td>
+<td>统一管理依赖，减少版本冲突</td>
+</tr>
+<tr>
+<td>公共模块复用</td>
+<td>需要手动同步和发布</td>
+<td>子包间直接引用，快速共享</td>
+</tr>
+<tr>
+<td>构建效率</td>
+<td>每个项目单独构建，耗时长</td>
+<td>按需构建，提升效率</td>
+</tr>
+<tr>
+<td>磁盘占用</td>
+<td>重复安装，磁盘占用高</td>
+<td>去重机制，节省磁盘空间</td>
+</tr>
+<tr>
+<td>协作成本</td>
+<td>跨项目协作复杂，测试联调耗时</td>
+<td>单仓库集中管理，便于协作</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>适应场景</p>
+<ol>
+<li>多模块项目：前端组件库，根据函数库</li>
+<li>微前端架构：多个前端项目整合为一个monorepo</li>
+<li>复杂后端项目：多个微服务的统一管理和部署</li>
+</ol>
+</li>
+<li><p>总结</p>
+<ol>
+<li>传统架构存在依赖管理困难，代码复用性低</li>
+<li><code>PNPM Monorepo</code>架构通过统一管理依赖和代码，大幅提升开发效率和协作体验</li>
+<li>架构迁移过程中需要注意工具链配置，依赖冲突解决以及构建和发布优化</li>
+</ol>
+</li>
+</ul>
+<h1 id="三、组件库基于Monorepo架构设计有什么实践经验"><a href="#三、组件库基于Monorepo架构设计有什么实践经验" class="headerlink" title="三、组件库基于Monorepo架构设计有什么实践经验"></a>三、组件库基于Monorepo架构设计有什么实践经验</h1><h3 id="现状和挑战"><a href="#现状和挑战" class="headerlink" title="现状和挑战"></a>现状和挑战</h3><ul>
+<li>组件库：提供复用的UI组件或工具函数，用于加速业务开发</li>
+<li>业务系统：作为面向最终用户的核心系统，通常依赖组件库和脚手架</li>
+</ul>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><ul>
+<li>依赖管理困难：组件库版本更新后，业务系统和脚手架同步难以保证</li>
+<li>重复构建：不同模块需要独立构建，效率低下</li>
+<li>版本冲突：各模块依赖的库版本不一致，容易导致冲突</li>
+<li>协作复杂：跨模块调试和联调需要额外的实践成本</li>
+</ul>
+<p>生产系统引用：<code>package.json</code>中引入：<code>&quot;@miaoma/ui&quot;:&quot;workspace:*&quot;</code></p>
+<p>遇到问题：</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./App.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Input</span> &#125; <span class="keyword">from</span> <span class="string">&quot;@miaoma/ui&quot;</span> <span class="comment">//Cannot find module</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Input</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>解决;</p>
+<p>在<code>tsconfig.json</code>指定输出<code>moduleResolution</code>和<code> baseUrl</code>以及<code>dts declaration</code>给他设定为true；在<code>tsup.config.ts</code>部分，将<code>dts： true</code>;同时在<code>package.json</code>处设置module-esm的入口，<code>&quot;module&quot;: &quot;dist/index.mjs&quot;</code>引入以及<code>&quot;types：&quot;</code>配置，解决了这个类型报错问题。</p>
+<hr>
+<p>**面试官问：**你在项目中遇到过哪些模块导入或类型声明相关的问题？是如何解决的？</p>
+<p><strong>回答示例：</strong></p>
+<p>是的，我在使用自研组件库 <code>@miaoma/ui</code> 时，遇到了 <code>Cannot find module</code> 的报错，主要原因是 TypeScript 无法解析该模块的类型声明和模块路径。</p>
+<p>为了解决这个问题，我做了如下几步：</p>
+<ol>
+<li><strong>配置 TypeScript（tsconfig.json）：</strong><ul>
+<li>将 <code>moduleResolution</code> 设置为 <code>&quot;node&quot;</code>，确保能正确解析 <code>node_modules</code> 中的模块。</li>
+<li>设置 <code>baseUrl</code> 为 <code>&quot;.&quot;</code>，用于简化路径解析。</li>
+<li>启用 <code>declaration: true</code>，自动生成 <code>.d.ts</code> 类型声明文件，方便其他项目引用时能获取类型信息。</li>
+</ul>
+</li>
+<li><strong>配置打包工具（tsup.config.ts）：</strong><ul>
+<li>设置 <code>dts: true</code>，确保组件库构建时会生成类型文件输出到 <code>dist/</code> 目录。</li>
+</ul>
+</li>
+<li><strong>调整组件库的 package.json：</strong><ul>
+<li>添加 <code>&quot;module&quot;: &quot;dist/index.mjs&quot;</code>，明确指定 ESM 构建产物路径。</li>
+<li>添加 <code>&quot;types&quot;: &quot;dist/index.d.ts&quot;</code>，告知 TypeScript 类型声明文件位置。</li>
+</ul>
+</li>
+</ol>
+<p>最终通过这几个步骤，成功解决了模块导入失败和类型缺失的问题，使得组件库可以在其他项目中被正确引用和使用，同时保持良好的类型提示和开发体验</p>
+<hr>
+<h2 id="1、工程化规范与代码质量保证"><a href="#1、工程化规范与代码质量保证" class="headerlink" title="1、工程化规范与代码质量保证"></a>1、工程化规范与代码质量保证</h2><ul>
+<li><p>统一代码规范</p>
+<p><code>ESLint</code>：统一代码风格和语法检查</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">pnpm add eslint -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Prettier</code>：格式化代码，提高可读性</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">pnpm add prettier -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交规范</p>
+<p><code>Commitlint</code>:规范提交信息</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">pnpm add <span class="meta">@commitlint</span>/config-conventional <span class="meta">@commitlint</span>/cli -D</span><br></pre></td></tr></table></figure>
+
+<p>配置<code>commitlint.config.js</code></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; <span class="attr">extends</span>: [<span class="string">&quot;commitlint/config-conventional&quot;</span>]&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自动化检查</p>
+<ol>
+<li><p><code>Husky</code>:在Git钩子中集成自动检查</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">pnpm add husky -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化<code>Husky</code></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npx husky install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置预提交检查脚本</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npx husky add .<span class="property">husky</span>/pre-commit <span class="string">&quot;pnpm lint&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h1 id="四、大厂如何基于monorepo进行工程化架构实践"><a href="#四、大厂如何基于monorepo进行工程化架构实践" class="headerlink" title="四、大厂如何基于monorepo进行工程化架构实践"></a>四、大厂如何基于<code>monorepo</code>进行工程化架构实践</h1><table>
+<thead>
+<tr>
+<th>公司</th>
+<th>项目&#x2F;模块</th>
+<th>地址</th>
+<th>简要说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>阿里</td>
+<td>Ant Design</td>
+<td></td>
+<td>企业级UI设计语言与React组件库</td>
+</tr>
+<tr>
+<td>阿里</td>
+<td>ahooks</td>
+<td></td>
+<td>高质量的React Hokks库</td>
+</tr>
+<tr>
+<td>阿里</td>
+<td>BizCharts</td>
+<td></td>
+<td>基于G2的React数据可视化库</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>Arco Design</td>
+<td></td>
+<td>企业级设计体系与组件库 支持React和Vue</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>VTable</td>
+<td></td>
+<td>面向大数据展示的可视化表格库</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>rsbuild</td>
+<td></td>
+<td>高性能构建工具，类似vite和esbuild</td>
+</tr>
+</tbody></table>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624223858582.png" alt="image-20250624223858582"></p>
+<p>适合B端架构设计</p>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230836571.png" alt="image-20250624230836571"></p>
+<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250624230858580.png" alt="image-20250624230858580"></p>
+<h1 id="五、如何做项目架构和工程化设计"><a href="#五、如何做项目架构和工程化设计" class="headerlink" title="五、如何做项目架构和工程化设计"></a>五、如何做项目架构和工程化设计</h1><p>项目架构通常指项目目录结构，构建流程、规范等</p>
+<p><code>monorepo</code>：单一代码仓库，比较主流的项目组织方式，允许在一个仓库中组织多个项目，相比于多仓库，它在大型组织和复杂项目中具有许多优势</p>
+<ul>
+<li>依赖管理<ol>
+<li>统一的依赖管理：所有项目共享一个依赖管理系统，减少了版本冲突问题</li>
+<li>版本同步：确保多个项目之间使用相同版本的依赖，避免依赖版本不一致导致的错误</li>
+</ol>
+</li>
+<li>代码复用<ol>
+<li>模块共享：多个项目共享相同的模块和库，减少代码重复</li>
+<li>统一工具链：可与为所有项目配置相同的工具链（编译器，测试框架）</li>
+</ol>
+</li>
+<li>协作效率<ol>
+<li>一致的代码风格：统一代码规范和风格</li>
+<li>跨项目变更：在<code>monorepo</code>中，跨项目变更可以一次提交中完成，避免多个仓库提交和同步的问题</li>
+<li>集中化的CI&#x2F;CD：设置统一的持续集成和持续部署流程，简化自动化构建和部署流程</li>
+</ol>
+</li>
+<li>可维护性<ol>
+<li>简化依赖图：通过集中管理项目之间的依赖关系，可以更清晰的理解和维护项目之间的依赖</li>
+<li>快速重构：更方便进行大规模的代码重构，因为所有代码在一个仓库中，便于搜索和替换</li>
+</ol>
+</li>
+<li>版本控制：<ol>
+<li>单一版本历史：所有项目记录在一个仓库中，便于查看项目整体演进流程</li>
+<li>简化分支管理：分支和合并操作变得更简便，减少跨仓库操作的复杂性</li>
+</ol>
+</li>
+<li>DX<ol>
+<li>统一的开发环境：共享相同的开发环境设置，减少开发者在不同项目间切换时的学习成本</li>
+<li>更快的开发周期：减少了跨仓库的协调工作，开发周期缩短</li>
+</ol>
+</li>
+</ul>
+<p>例子：React</p>
+<h2 id="基础选型："><a href="#基础选型：" class="headerlink" title="基础选型："></a>基础选型：</h2><ol>
+<li>状态管理</li>
+<li>路由管理</li>
+<li>表单管理</li>
+<li>API请求与数据获取</li>
+<li>样式处理</li>
+<li>构建与打包工具</li>
+<li>测试</li>
+<li>类型检查</li>
+<li>代码质量与开发工具</li>
+<li>持续继承和部署（CI&#x2F;CD）</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>前端工程化-2</title>
     <url>/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-2/</url>
     <content><![CDATA[<h1 id="一、打包构建方案"><a href="#一、打包构建方案" class="headerlink" title="一、打包构建方案"></a>一、打包构建方案</h1><ul>
@@ -326,300 +861,6 @@
 </ul>
 </li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>前端工程化-1</title>
-    <url>/2025/06/12/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96-1/</url>
-    <content><![CDATA[<h1 id="一、传统架构概述"><a href="#一、传统架构概述" class="headerlink" title="一、传统架构概述"></a>一、传统架构概述</h1><p>独立于一个个独立的<code>github</code>仓库</p>
-<p>特点：</p>
-<ul>
-<li>独立项目结构，所有项目都是分开的，<code>github</code>仓库</li>
-<li>技术栈独立</li>
-<li>规范化，自动化相关处理是项目间割裂</li>
-<li>依赖管理，每个依赖之间存在版本关系</li>
-<li>部署， docker， docker-compose部署， 自动化脚本很难形成统一（<code>monorepo</code>）</li>
-</ul>
-<h1 id="二、monorepo"><a href="#二、monorepo" class="headerlink" title="二、monorepo"></a>二、monorepo</h1><ul>
-<li>混合项目结构，所有相关的工程形成子包进行管理</li>
-<li>技术栈高度统一（团队基建项目、业务项目、子服务、技术栈）</li>
-<li>规范化、自动化、流程化项目将共享</li>
-<li>依赖管理、版本统一管理</li>
-<li>部署，docker、docker-compose 自动化脚本统一部署流程</li>
-</ul>
-<h2 id="1、架构方案"><a href="#1、架构方案" class="headerlink" title="1、架构方案"></a>1、架构方案</h2><h3 id="a-包管理"><a href="#a-包管理" class="headerlink" title="a. 包管理"></a>a. 包管理</h3><p><code>pnpm workspace yarn workspace lerna</code></p>
-<h3 id="b-构建缓存"><a href="#b-构建缓存" class="headerlink" title="b.构建缓存"></a>b.构建缓存</h3><h3 id="c-增量构建"><a href="#c-增量构建" class="headerlink" title="c.增量构建"></a>c.增量构建</h3><p><code>nx turbo</code></p>
-<h2 id="2、pnpm"><a href="#2、pnpm" class="headerlink" title="2、pnpm"></a>2、<code>pnpm</code></h2><p><code>npm yarn cnpm</code></p>
-<ul>
-<li><p>优势</p>
-<ol>
-<li><p>软链接：相当于在window中创建一个快捷键，在项目中间有大量的这种快捷方式，通过这种快捷方式能够之间指向软件本体的那个位置</p>
-<p>在我们用的这些包里面，它通过软连接的方式链接到你的项目工程在装依赖的时候，它会装到一个集中仓库，它在集中仓库中取查找对应的依赖，这个过程中又涉及许多寻址–加快搜索的机制</p>
-</li>
-<li><p>缓存机制</p>
-<p>寻址–中心化思想</p>
-<p>安装时候并行的提速，以往有</p>
-</li>
-<li><p>原生支持 workspace</p>
-</li>
-<li><p>磁盘占用少</p>
-</li>
-</ol>
-<p>总结：中心化思想解决依赖复用问题</p>
-</li>
-</ul>
-<hr>
-<p><strong>问题1：你了解 pnpm 吗？它比 npm &#x2F; yarn 有哪些优势？</strong></p>
-<p>它最大的优势之一是使用了<strong>软链接机制</strong>：在安装依赖时，不再将依赖复制到每个项目中，而是将它们统一保存在一个中央存储区中，通过软链接（就像 Windows 中的快捷方式）来指向这些真实依赖。这种方式极大减少了磁盘占用，同时提升了模块复用率。此外，<code>pnpm</code> 还有很好的<strong>缓存机制和并行安装能力</strong>，能有效提升安装速度。它还<strong>原生支持 workspace</strong>，在管理多个子项目时比 npm&#x2F;yarn 更加高效。整体来看，<code>pnpm</code> 是一个以‘中心化依赖复用’为核心思想、兼顾性能和磁盘效率的现代包管理工具，非常适合工程规模较大的场景。</p>
-<p>相比 npm 的扁平结构和 yarn 的 node_modules 链接方式，pnpm 会严格按照依赖声明生成树状结构，能更早发现重复或错误依赖。</p>
-<p>在组件库开发中，我使用了 pnpm 来搭建 monorepo 结构。pnpm 原生支持 workspace，我们把每个组件作为独立的子包管理，同时通过软链接机制在本地模拟依赖关系，开发时修改某个子包能立即生效，极大提高了联动调试效率。相比 npm 或 yarn，pnpm 的依赖安装速度更快、磁盘占用更小，并且强依赖隔离能防止组件间的幽灵依赖和版本冲突问题。整体体验非常适合做组件库这类多模块、多依赖、迭代频繁的工程。</p>
-<h3 id="快速安装与缓存"><a href="#快速安装与缓存" class="headerlink" title="快速安装与缓存"></a>快速安装与缓存</h3><ul>
-<li>pnpm 的安装非常快，支持并行下载；</li>
-<li>所有安装包统一缓存，无需多次重复拉取；</li>
-<li>对于频繁运行的构建脚本（如 Storybook&#x2F;Vite 打包），速度有明显优势。</li>
-</ul>
-<h3 id="依赖隔离与版本控制"><a href="#依赖隔离与版本控制" class="headerlink" title="依赖隔离与版本控制"></a>依赖隔离与版本控制</h3><ul>
-<li>pnpm 遵循严格的依赖隔离机制，不允许未声明的依赖被隐式使用；</li>
-<li>每个包需要明确声明依赖，方便组件库后续维护、升级和发布；</li>
-<li>可配合 <code>pnpm recursive publish</code> 实现按包独立版本管理或统一发布。</li>
-</ul>
-<p><strong>问题2：怎么将传统架构的项目迁移到monorepo架构</strong></p>
-<p>分为三阶段解决</p>
-<ol>
-<li><p>解决传统架构的基础痛点</p>
-<ul>
-<li>代码集中化管理，将多个关联的项目统一到一个 github 仓库</li>
-<li>工具引入：pnpm workspace</li>
-<li>CI&#x2F;CD重构：</li>
-</ul>
-</li>
-<li><p>阶段2：具体的monorepo架构</p>
-<ul>
-<li>公共模块抽离</li>
-<li>基于pnpm turbo 解决子包与主包的关系</li>
-</ul>
-</li>
-<li><p>自动化构建流程优化</p>
-<ul>
-<li><p>打包方案：vite、webpack、其他的方案rollup、tsup、esbuild、swc，rolldown</p>
-<p>成本最低，见效最快：业务系统：vite；脚手架，UI库选择tsup</p>
-</li>
-<li><p>构建流程优化，依赖关系解决（循环依赖引用等问题处理）、哪些包需要前置（后置）构建</p>
-</li>
-<li><p>发布，分离  业务系统发布：构建成docker镜像，或直接部署</p>
-</li>
-<li><p>监控和测试</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>回答：</p>
-<p>如果让我负责将传统架构的前端项目迁移到 Monorepo 架构，我会分三个阶段来推进，逐步解决实际问题、稳步落地。</p>
-<p>第一阶段是<strong>解决传统架构的基础痛点</strong>。我们通常会面对多个项目分散、版本不一致、依赖重复的问题，因此首先要<strong>将多个关联项目集中到同一个 Git 仓库</strong>，实现集中化管理。随后引入 <strong>pnpm workspace</strong> 作为包管理方案，它原生支持多包协同，能够高效地处理依赖复用与版本一致性。与此同时，我们还会<strong>重构 CI&#x2F;CD 流程</strong>，将原本分散的构建&#x2F;测试&#x2F;部署任务统一管理，降低运维复杂度。</p>
-<p>第二阶段是<strong>构建具体的 Monorepo 架构</strong>。这一步我们会对多个项目进行依赖分析，把重复使用的部分抽成<strong>公共模块</strong>（如 utils、hooks、ui 组件），然后用 <code>pnpm</code> 和 <code>Turborepo</code> 来管理子包与主包之间的构建关系，支持依赖跟踪、缓存和并行任务，确保各模块之间构建高效且解耦。</p>
-<p>第三阶段是<strong>构建流程自动化和性能优化</strong>。我们会根据包的类型选择不同的构建工具，例如业务系统使用 Vite 提高开发体验，组件库或脚手架类包则使用 Tsup 或 Rollup 提升构建效率。我们还会处理依赖顺序（如某些包需要前置构建）、解决循环依赖等结构性问题。在发布方面，组件或工具包通过 pnpm publish，业务系统则可以直接构建为 Docker 镜像部署。此外，还会集成自动化测试、代码规范检查、运行时监控等机制，保证整个 Monorepo 的质量和可维护性。</p>
-<p>总体来说，迁移过程重在循序渐进，通过工具组合和流程抽象，把原来割裂的工程变成统一高效的协同开发平台。</p>
-<hr>
-<h2 id="3、关键性卡点（步骤）"><a href="#3、关键性卡点（步骤）" class="headerlink" title="3、关键性卡点（步骤）"></a>3、关键性卡点（步骤）</h2><h3 id="a-项目统一"><a href="#a-项目统一" class="headerlink" title="a.项目统一"></a>a.项目统一</h3><h3 id="b-pnpm配置"><a href="#b-pnpm配置" class="headerlink" title="b.pnpm配置"></a>b.pnpm配置</h3><h3 id="c-依赖管理"><a href="#c-依赖管理" class="headerlink" title="c.依赖管理"></a>c.依赖管理</h3>]]></content>
-  </entry>
-  <entry>
-    <title>以太坊</title>
-    <url>/2025/06/10/Ganache%E5%AE%89%E8%A3%85%E4%B8%8E%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="Ganache–以太坊部署-智能合约测试"><a href="#Ganache–以太坊部署-智能合约测试" class="headerlink" title="Ganache–以太坊部署+智能合约测试"></a>Ganache–以太坊部署+智能合约测试</h2><p>资源链接：</p>
-<p><code>Ganache</code>：<a href="https://archive.trufflesuite.com/ganache/">Ganache - Truffle Suite</a></p>
-<p><code>Remix</code>:<a href="https://remix.ethereum.org/">Remix - Ethereum IDE</a></p>
-<p><code>MetaMask</code>:浏览器插件安装，记得在remix界面打开<code>MetaMask</code>，确保与<code>Remix</code>连接</p>
-<h3 id="1、第一步：准备工作"><a href="#1、第一步：准备工作" class="headerlink" title="1、第一步：准备工作"></a>1、第一步：准备工作</h3><p>确保系统安装了<code>node</code>、<code>npm</code></p>
-<h3 id="下载安装Ganache"><a href="#下载安装Ganache" class="headerlink" title="下载安装Ganache"></a>下载安装Ganache</h3><p>Ganache是Truffle Suite的一部分，是一个用于以太坊区块链的个人区块链模拟器。它可以在本地计算机上快速启动一个以太坊网络，帮助开发者进行智能合约的开发、测试和部署。</p>
-<h4 id="下载图形化界面"><a href="#下载图形化界面" class="headerlink" title="下载图形化界面"></a>下载图形化界面</h4><p>进入Ganache官网–<a href="https://archive.trufflesuite.com/ganache/">Ganache - Truffle Suite</a>，点击download即可下载适配电脑的版本，下载后的文件为appx版本，将其改为.exe即可成功运行（也可以直接点击运行）</p>
-<h3 id="2、开始"><a href="#2、开始" class="headerlink" title="2、开始"></a>2、开始</h3><h4 id="2-1：以太坊设置"><a href="#2-1：以太坊设置" class="headerlink" title="2.1：以太坊设置"></a>2.1：以太坊设置</h4><ul>
-<li>主要查看链上操作的gas变化以及通过设置中的Serve的RPC地址与<code>MetaMask</code>相连接</li>
-</ul>
-<p>双击打开，点击QUICKSTART，即可启动一个本地以太坊区块链，并显示10个预设账户及其相关信息，如下图所示</p>
-<p><img src="C:\Users\28079\AppData\Roaming\Typora\typora-user-images\image-20250620172318601.png" alt="image-20250620172318601"></p>
-<hr>
-<p>Address：以太坊地址，后面连接remix需要进行比对</p>
-<p>Balance：该地址持有的ETH数量</p>
-<p>TX Count：交易计数–后续当我们成功将智能合约部署或发起相关链上操作时，该值会发生变化</p>
-<p>Index：该地址在此列表（账号）中的索引</p>
-<h4 id="2-2：智能合约的设置"><a href="#2-2：智能合约的设置" class="headerlink" title="2.2：智能合约的设置"></a>2.2：智能合约的设置</h4><p>使用Remix的网页端，可以在左下角的设置（齿轮图标）中设置页面背景颜色及语言</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>React事件</title>
-    <url>/2025/06/03/react%E4%BA%8B%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="React的事件机制"><a href="#React的事件机制" class="headerlink" title="React的事件机制"></a>React的事件机制</h2><h3 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h3><p>React基于浏览器的事件机制自身实现了一套事件机制，包括事件注册、事件注册、事件冒泡、事件派发。在react中，我，们称为合成事件，合成事件就是react模拟原生DOM事件所有能力的一个事件对象。可以这么理解：原生浏览器事件的跨浏览器包装器</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过合成事件调用</span></span><br><span class="line"><span class="keyword">const</span> button = <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>= <span class="string">&#123;handleClick&#125;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 原生事件调用</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 获取原生dom事件</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">nativeEvent</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><ol>
-<li><p>事件名称命名：</p>
-<ul>
-<li><p>&#96;JavaScript&#96;&#96;</p>
-<p><code>&lt;button onclick=&quot;handleClick()&quot;&gt;按钮&lt;/button&gt;</code></p>
-</li>
-<li><p><code>React</code></p>
-<p><code>const button = &lt;button onClick=&#123;handleClick&#125;&gt;按钮&lt;/button&gt;</code></p>
-</li>
-</ul>
-<p>react通过驼峰的命名方式，原生是小写的方式，事件绑定的函数不同：react：传入对应的函数；原生：字符串</p>
-</li>
-<li><p>事件处理函数不同：</p>
-<p><code>React</code>传入一个回调函数，原生传入一个字符串</p>
-</li>
-</ol>
-<h3 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h3>]]></content>
-  </entry>
-  <entry>
-    <title>前端场景</title>
-    <url>/2025/06/02/%E5%89%8D%E7%AB%AF%E5%9C%BA%E6%99%AF/</url>
-    <content><![CDATA[<h2 id="一、React首页白屏可能是什么问题引起的？怎么解决"><a href="#一、React首页白屏可能是什么问题引起的？怎么解决" class="headerlink" title="一、React首页白屏可能是什么问题引起的？怎么解决"></a>一、React首页白屏可能是什么问题引起的？怎么解决</h2><p><a href="https://www.oryoy.com/news/react-xing-neng-you-hua-ji-qiao-jie-jue-shou-ye-bai-ping-jia-zai-wen-ti-ti-sheng-yong-hu-ti-yan.html">React性能优化技巧：解决首页白屏加载问题，提升用户体验 - 云原生实践</a></p>
-<p>白屏主要发生在首次加载时，主要原因包括</p>
-<ol>
-<li>静态资源路径错误。</li>
-<li>依赖包没有正确安装或版本兼容问题</li>
-<li>网络请求失败</li>
-<li>react的路由配置错误</li>
-<li>构建工具的问题，比如 Webpack 配置错误。</li>
-<li><strong>资源加载阻塞</strong>：React应用的JavaScript文件较大，加载和解析时间较长，导致浏览器在渲染页面之前需要等待。</li>
-<li><strong>同步渲染</strong>：React默认的渲染方式是同步的，即在所有JavaScript代码执行完毕后才会进行DOM渲染。</li>
-<li><strong>服务端渲染（SSR）缺失</strong>：单页应用（SPA）通常依赖客户端渲染，服务端返回的初始HTML内容较少，导致浏览器渲染延迟。</li>
-</ol>
-<ul>
-<li><p>解决办法：</p>
-<ol>
-<li><p>确保静态资源的路径配置正确，检查 React项目的 config文件或者 Webpack 的配置文件。</p>
-</li>
-<li><p>确认所有依赖包已经正确安装，版本兼容。如果有多个版本的 React 依赖包如react router&#x2F;redux，可能会导致冲突</p>
-</li>
-<li><p>确保网络请求的 API正常工作，可以通过 console日志或<code>chrom devtools</code> 验证</p>
-</li>
-<li><p>检查 <code>ReactRouter </code>的配置，包括路径匹配和重定向设置。</p>
-</li>
-<li><p>审查Webpack配置，特别是 output和 <code>publicPath</code> 设置</p>
-</li>
-<li><p>使用服务端渲染（SSR）</p>
-<p>使用next.js等SSR框架，在服务器上渲染React组件，生成完整的HTML，然后发送到客户端</p>
-</li>
-<li><p>预渲染：是一种介于客户端渲染和服务端渲染之间的技术，适用于静态内容的页面。</p>
-<ul>
-<li><p>使用prerender-spa-plugin等工具。</p>
-</li>
-<li><p>在构建阶段生成静态HTML文件</p>
-</li>
-<li><p>在用户访问时直接返回预渲染的HTML。</p>
-</li>
-</ul>
-<p>注意：刷新时有时会闪烁以下首次页面，这时解决方法，我们可以设置两个预渲染页面（a.html-首页；b.html-loading图）这时候，如果加载首页，直接a.html；如果加载其他的页码并没有设置预渲染页面，就用b.html，这时候就需要用nginx配置</p>
-</li>
-<li><p>懒加载与代码拆分</p>
-<p>可以将应用拆分成多个小的代码块，按需加载，减少初始加载时间。</p>
-<ul>
-<li>使用<code>React.lazy</code>和Suspense实现组件级别的懒加载。</li>
-<li>使用webpack的code splitting功能进行代码拆分。</li>
-</ul>
-</li>
-<li><p>优化资源加载</p>
-<p>通过压缩代码、优化图片、使用CDN等方式，可以减少资源加载时间。</p>
-<ul>
-<li>使用<code>UglifyJS</code>、<code>Terser</code>等工具压缩JavaScript代码。</li>
-<li>使用<code>ImageOptim</code>等工具压缩图片。</li>
-<li>使用CDN加速资源加载</li>
-</ul>
-</li>
-<li><p>添加启动屏，缓解用户对白屏的感知</p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="二、前端如何处理后端接口一次性返回的超大树形结构数据"><a href="#二、前端如何处理后端接口一次性返回的超大树形结构数据" class="headerlink" title="二、前端如何处理后端接口一次性返回的超大树形结构数据"></a>二、前端如何处理后端接口一次性返回的超大树形结构数据</h2><p>对于前端来讲，关键在于减少渲染压力、提高用户的交互体验，一般考虑以下几个方面：</p>
-<ol>
-<li><p>分页加载：将数据页分成多页，用户滚动或者点击“加载更多“的时候加载新一页的数据</p>
-</li>
-<li><p>虚拟滚动：只在视口内渲染一定数量的节点，随着用户滚动动态加载更多的节点。</p>
-<p>树形组件库：React的react-virtualized</p>
-</li>
-<li><p>懒加载：按需加载数据，只有在用户展开某个节点时才请求该节点的子节点数据</p>
-<p>除了懒加载数据，惰性渲染也是一种优化手段，即只在需要的时候才渲染DOM节点。比如， 当用户展开树节点时才渲染其子节点</p>
-</li>
-<li><p>批量处理：将大数据集分块处理，避免一次性渲染大量数据，造成浏览器卡顿。</p>
-</li>
-<li><p><code>Web Workers</code>：当进行复杂的计算或处理时使用<code>Web Workers</code>，可 以将计算从主线程分离出来，避免主线程阻塞，提高性能。</p>
-</li>
-<li><p>使用缓存：对于大型树形数据，可以考虑使用本地缓存(如<code>localstorage或IndexedDB</code>)来存储已经加载过 的数据，避免每次用户操作时都去请求后端</p>
-</li>
-<li><p>树形结构优化:优化树形结构数据本身，例如对于深度很深但不常用的节点，考虑在后端进行预处理筛选， 或者返回数据的层次结构时，先返回主要的部分，再按照需求加载剩余的部分</p>
-</li>
-</ol>
-<h2 id="三、使用同一个链接，如何实现-PC-打开是-web-应用、手机打-开是一个-H5-应用"><a href="#三、使用同一个链接，如何实现-PC-打开是-web-应用、手机打-开是一个-H5-应用" class="headerlink" title="三、使用同一个链接，如何实现 PC 打开是 web 应用、手机打 开是一个 H5 应用"></a>三、使用同一个链接，如何实现 PC 打开是 web 应用、手机打 开是一个 H5 应用</h2><p>背景：一个链接访问页面，同时适配PC、Mobile</p>
-<ul>
-<li><p>先识别端，根据不同的端进行内容渲染</p>
-<h3 id="1、-识别端"><a href="#1、-识别端" class="headerlink" title="1、 识别端"></a>1、 识别端</h3><ol>
-<li><p><code>Js</code>：识别  <code>userAgent</code> 用户代理</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(navigator.<span class="property">userAgent</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>判断：通过正则 –&gt;元字符、匹配</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">isMobile</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="regexp">/Mobi|Android/i</span>.<span class="title function_">test</span>(navigator.<span class="property">userAgent</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断</span></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_">isMobile</span>()) &#123;</span><br><span class="line">  <span class="comment">// 1、跳转到mobile.html</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;/mobile.html&quot;</span></span><br><span class="line">  <span class="comment">// 2、加载不同的css文件</span></span><br><span class="line">  <span class="comment">// 3、运行时的代码里面通过提工的isMobile来做处理</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;/desktop.html&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// react</span></span><br><span class="line">&lt;<span class="title class_">DeviceProvider</span> value=&#123;&#123;<span class="attr">type</span>: <span class="title function_">isMobile</span>()&#125;&#125;&gt;&lt;/<span class="title class_">DeviceProvider</span>&gt;</span><br><span class="line"><span class="comment">// 子组件使用</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Header</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="comment">//拿到value</span></span><br><span class="line">   <span class="keyword">const</span> &#123;type&#125; = <span class="title function_">useContext</span>(<span class="title class_">DeviceContext</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这种方式是通过前端进行判断</p>
-<p>问题：如果PC端不断的缩小，这个内容页不会发生变化</p>
-</li>
-</ol>
-<h3 id="2、响应式"><a href="#2、响应式" class="headerlink" title="2、响应式"></a>2、响应式</h3><p>媒体查询、flex布局</p>
-</li>
-<li><p>框架内完成适配-react</p>
-<p>封装一个hook</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; useMediaQuery &#125; <span class="keyword">from</span> <span class="string">&#x27;react-responsive&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">   <span class="keyword">const</span> isDeskTOP = <span class="title function_">useMediaQuery</span>(&#123; <span class="attr">minWidth</span>: <span class="number">1024</span>&#125;);</span><br><span class="line">   <span class="keyword">const</span> isMobile = <span class="title function_">useMediaQuery</span>(&#123; <span class="attr">maxWidth</span>: <span class="number">1024</span>&#125;);</span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         &#123;isDesktop &amp;&amp; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Desktop Web Application<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">p</span>&gt;</span>This content is displayed on Desktop devices.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         )&#125; </span></span><br><span class="line"><span class="language-xml">          &#123;isMobile &amp;&amp; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Mobile H5 Application<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">               <span class="tag">&lt;<span class="name">p</span>&gt;</span>This content is displayed on Mobile devices.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">         )&#125;   </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="四、如何实现网页加载进度条"><a href="#四、如何实现网页加载进度条" class="headerlink" title="四、如何实现网页加载进度条"></a>四、如何实现网页加载进度条</h2><p>问题：</p>
-<ol>
-<li>怎么拿到进度<ul>
-<li>方法兼容性</li>
-<li>fetch、ajax</li>
-</ul>
-</li>
-<li>怎么绘制进度<ul>
-<li>dom</li>
-<li>svg</li>
-<li>canvs</li>
-</ul>
-</li>
-</ol>
-<h3 id="1、方案1"><a href="#1、方案1" class="headerlink" title="1、方案1"></a>1、方案1</h3><h4 id="页面加载"><a href="#页面加载" class="headerlink" title="页面加载"></a>页面加载</h4><p>监听页面加载的事件， 来控制进度条的；  创建对应的， 监听你的整个控制条的进度</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#progress-bar</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="number">#4caf50</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">z-index</span>: <span class="number">9999</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>: width <span class="number">0.4s</span> ease;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">simulateLoadingProgress</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> progressBar = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">let</span> width = <span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> interval = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">if</span> (width &gt;= <span class="number">100</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">clearInterval</span>(interval);</span></span><br><span class="line"><span class="language-javascript">                    progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;100%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                        progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;0%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;, <span class="number">500</span>);</span></span><br><span class="line"><span class="language-javascript">                &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                    width += <span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">                    progressBar.<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;width&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;, <span class="number">100</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">simulateLoadingProgress</span>();</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="请求实现"><a href="#请求实现" class="headerlink" title="请求实现"></a>请求实现</h4><p>Ajax 拿到进度， svg&#x2F;dom 绘制</p>
-<p>请求拿到进度。其实绘制的部分逻辑可以复用，只是它驱动的事件变了，不是load事件驱动它，而是整个请求过程中给你返回值的那个进度，后端处理了百分之多少拿的</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#progress-bar</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">z-index</span>: <span class="number">9999</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>: width <span class="number">0.4s</span> ease;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">loadResource</span>(<span class="params">url</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// 监听进度 通过onprogress去监听</span></span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="property">onprogress</span> = <span class="keyword">function</span>(<span class="params">event</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">if</span> (event.<span class="property">lengthComputable</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="keyword">const</span> precentComplete = (event.<span class="property">loaded</span> / event.<span class="property">total</span>) * <span class="number">100</span>; </span></span><br><span class="line"><span class="language-javascript">                        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;precentComplete&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">                xhr.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">if</span> (xhr.<span class="property">status</span> === <span class="number">200</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;100%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;0%&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">                    &#125;, <span class="number">500</span>);</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;;</span></span><br><span class="line"><span class="language-javascript">            xhr.<span class="title function_">send</span>();</span></span><br><span class="line"><span class="language-javascript">        </span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 模拟加载资源</span></span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> resourceUrl = <span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">loadResource</span>(<span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>fetch实现</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fetch 可不可以实现 --&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- 可以实现 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">loadResource</span>(<span class="params">url</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">fetch</span>(url)</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">blob</span>())</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">then</span>(<span class="function"><span class="params">blob</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>();</span></span><br><span class="line"><span class="language-javascript">            reader.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> progress = (e.<span class="property">loaded</span> / e.<span class="property">total</span>) * <span class="number">100</span>;</span></span><br><span class="line"><span class="language-javascript">                <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;progress&#125;</span>%`</span>;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">            reader.<span class="title function_">readAsDataURL</span>(blob);</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;加载失败:&#x27;</span>, error);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> resourceUrl = <span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">loadResource</span>(<span class="string">&#x27;https://example.com/large-file.txt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>react框架实现</li>
-</ul>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span> <span class="keyword">as</span> <span class="title class_">Router</span>, <span class="title class_">Switch</span>, <span class="title class_">Route</span>, useHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">NProgress</span> <span class="keyword">from</span> <span class="string">&#x27;nprogress&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;nprogress/nprogress.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Home</span> = (<span class="params"></span>) =&gt; <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">About</span> = (<span class="params"></span>) =&gt; <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>About<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> history = <span class="title function_">useHistory</span>();</span><br><span class="line"></span><br><span class="line">    <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title class_">NProgress</span>.<span class="title function_">configure</span>(&#123; <span class="attr">showSpinner</span>: <span class="literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">uhandleStart</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">            <span class="title class_">NProgress</span>.<span class="title function_">start</span>();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">handleStop</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">            <span class="title class_">NProgress</span>.<span class="title function_">done</span>();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        history.<span class="title function_">listen</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">handleStart</span>();</span><br><span class="line">            <span class="title function_">handleStop</span>();</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            history.<span class="title function_">listen</span>().<span class="title function_">cancel</span>();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;, [history]);</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="五、如何禁止别人调试前端页面代码"><a href="#五、如何禁止别人调试前端页面代码" class="headerlink" title="五、如何禁止别人调试前端页面代码"></a>五、如何禁止别人调试前端页面代码</h2><ol>
-<li>禁用右键：通过JS禁用右键点击事件</li>
-<li>禁用F12和开发者工具</li>
-<li>代码混淆和压缩</li>
-<li>检测工具开关开发者工具</li>
-<li>真正关键的逻辑和数据，放在后端实现，并确保通过API的安全调用等措施确保安全性</li>
-</ol>
-<h2 id="六、、如何使用-JavaScript-实现一个轻量级本地存储方案，用于保存和读取用户偏好设置"><a href="#六、、如何使用-JavaScript-实现一个轻量级本地存储方案，用于保存和读取用户偏好设置" class="headerlink" title="六、、如何使用 JavaScript 实现一个轻量级本地存储方案，用于保存和读取用户偏好设置"></a>六、、如何使用 JavaScript 实现一个轻量级本地存储方案，<strong>用于保存和读取用户偏好设置</strong></h2><p>使用localStorage非常简单，可以通过以下步骤来实现：</p>
-<ol>
-<li>使用<code>localStorage.setItem(key, value)</code>方法将数据存储到localStorage中，key是要存储的数据的键，value是对应的值。</li>
-<li>使用<code>localStorage.getItem(key)</code>方法可以获取之前存储的数据，key是要获取的数据的键。</li>
-<li>使用<code>localStorage.removeItem(key)</code>方法可以删除特定键的数据。</li>
-<li>使用<code>localStorage.clear()</code>方法可以清空localStorage中的所有数据。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="七、使用react设计一个过滤器"><a href="#七、使用react设计一个过滤器" class="headerlink" title="七、使用react设计一个过滤器"></a>七、使用react设计一个过滤器</h2><p><a href="https://www.oryoy.com/news/react-shi-zhan-gao-xiao-shi-yong-guo-lv-qi-shi-xian-shu-ju-dong-tai-shai-xuan-yu-zhan-shi.html">React实战：高效使用过滤器实现数据动态筛选与展示 - 云原生实践</a></p>
 ]]></content>
   </entry>
 </search>
